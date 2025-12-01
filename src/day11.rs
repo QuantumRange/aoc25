@@ -5,10 +5,10 @@ fn main() {
         .expect("Error reading file")
         .lines()
         .map(|line| match line.chars().next().unwrap() {
-                'L' => -1,
-                'R' => 1,
-                _ => panic!("Invalid direction"),
-            } * line[1..].parse::<i32>().expect("Invalid number")
+            'L' => -1,
+            'R' => 1,
+            _ => panic!("Invalid direction"),
+        } * line[1..].parse::<i32>().expect("Invalid number")
         )
         .collect::<Vec<_>>();
 
